@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+    <script src="https://cdn.jsdelivr.net/npm/vue"></script>
+</head>
+<body>
+    
+    <div id="vue-app">
+        <h2>{{name}}</h2>
+        <p>{{greet()}}</p>
+
+        <div v-bind:class="{canvas:true}" v-on:mousemove="updateXY" >
+                {{x}},{{y}}
+        </div>
+
+        <div v-on:click="available =!available" v-bind:class="{red:available}" v-on:click.self="alertoption">click me
+            
+        <span class="green">asd</span></div>
+    </div>
+
+
+    <h3>example 2</h3>
+
+    <script src="app.js"></script>
+    <style>
+    .canvas{
+        height: 500px;
+        width:500px;
+        border:1px solid red;
+    }
+    .red span{background-color:red;}
+    .green{background-color:green;}
+
+    </style>
+</body>
+</html>
